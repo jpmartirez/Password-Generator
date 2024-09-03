@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="font-Montserrat">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator | JP</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="icon" type="image/x-icon" href="./icons/password-logo.png" />
+  </head>
+  <body class="h-[100vh] flex items-center justify-center bg-violet-600 py-4">
+    <div
+      class="mx-5 px-10 pb-10 border-4 border-black bg-white rounded-xl flex flex-col items-center shadow-[8px_8px_0px_black]"
+    >
+      <div>
+        <a href=""
+          ><img class="w-[120px]" src="./icons/password-logo.png" alt="" />
+        </a>
+      </div>
+      <p class="text-lg font-semibold">Generated Password:</p>
+      <input
+        type="text"
+        disabled
+        id="generatedPassword"
+        class="border border-black md:w-[85%] w-full my-4 p-2 md:p-4 rounded-xl text-center font-semibold md:text-base text-xs"
+      />
+
+      <div class="flex flex-col items-center md:flex-row gap-7">
+        <div class="flex flex-col gap-4">
+          <div>
+            <label for="length" class="font-semibold"
+              >Length of the password</label
+            >
+            <input
+              type="number"
+              id="length"
+              min="1"
+              max="30"
+              class="p-2 border border-black rounded-lg"
+              value="1"
+            />
+          </div>
+          <div>
+            <input type="checkbox" id="uppercase" class="cursor-pointer" />
+            <label for="uppercase" class="cursor-pointer"
+              >Include uppercase letters</label
+            >
+          </div>
+          <div>
+            <input type="checkbox" id="lowercase" class="cursor-pointer" />
+            <label for="lowercase" class="cursor-pointer"
+              >Include lowercase letters</label
+            >
+          </div>
+          <div>
+            <input type="checkbox" id="numbers" class="cursor-pointer" />
+            <label for="numbers" class="cursor-pointer">Include numbers</label>
+          </div>
+          <div>
+            <input type="checkbox" id="symbols" class="cursor-pointer" />
+            <label for="symbols" class="cursor-pointer">Include symbols</label>
+          </div>
+        </div>
+        <div>
+          <button
+            class="p-4 font-bold text-white rounded-lg bg-violet-600"
+            id="generate"
+          >
+            GENERATE PASSWORD
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
