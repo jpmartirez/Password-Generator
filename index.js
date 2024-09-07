@@ -1,3 +1,10 @@
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter"){
+        document.getElementById("generate").click();
+    }
+})
+
+
 document.getElementById("generate").addEventListener("click", () => {
     let uppercase = false;
     let lowercase = false;
